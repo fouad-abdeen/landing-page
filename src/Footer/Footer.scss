@@ -1,0 +1,22 @@
+@import "../styles.scss";
+
+.container-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.footer-logo {
+  width: 12.5rem;
+  height: 6.25rem;
+}
+
+.footer-row {
+  width: 40%;
+  margin: auto;
+}
+
+.row {
+  border-top: 3px solid $roundtrip-color-primary;
+  margin-bottom: 0.625rem;
+}

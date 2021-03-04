@@ -1,0 +1,88 @@
+@import "../styles.scss";
+
+.body-title {
+  text-align: center;
+}
+
+.body-row {
+  width: 40%;
+  margin: auto;
+}
+
+._row {
+  border-top: 3px solid $roundtrip-color-primary;
+  margin-bottom: 2.5rem;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.body-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.625rem;
+}
+
+.main-buttons {
+  width: 65%;
+}
+
+div.main-buttons > button {
+  background-color: $roundtrip-color-primary;
+  border-color: $roundtrip-color-secondary;
+  border-radius: 30px;
+}
+
+.body-links {
+  color: $roundtrip-color-secondary;
+  text-decoration: none;
+}
+
+.body-links:hover {
+  color: $roundtrip-color-secondary;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btnInfo {
+  background: transparent;
+  border: transparent;
+  border-radius: 50%;
+  color: $roundtrip-color-primary;
+}
+
+.fb-videos {
+  margin-top: 5rem;
+}
+
+.body-videos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.body-subscribe {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+@media only screen and (max-width: 756px) {
+  .button-subscribe {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 757px) {
+  .button-subscribe {
+    width: 50%;
+  }
+}
+
+div.button-subscribe > button {
+  background-color: $roundtrip-color-primary;
+  border-color: $roundtrip-color-secondary;
+  border-radius: 30px;
+}

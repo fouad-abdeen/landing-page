@@ -1,0 +1,17 @@
+@import "../styles.scss";
+
+.header-logo {
+  width: 9.375rem;
+  height: 9.375rem;
+}
+
+.header-title {
+  margin-top: 2.5rem;
+  margin-left: 1.25rem;
+}
+
+div.header-button > button {
+  background-color: $roundtrip-color-primary;
+  border-color: $roundtrip-color-secondary;
+  border-radius: 30px;
+}

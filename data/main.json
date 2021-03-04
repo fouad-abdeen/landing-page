@@ -1,0 +1,66 @@
+{
+  "info": [
+    {
+      "title": "راوندتريب",
+      "body": "أول منصة إعلاميّة متخصصة بأخبار الدراجات الهوائية والرياضة في طرابلس، لبنان"
+    },
+    {
+      "title": "RoundTrip",
+      "body": "RoundTrip is the first cycling news outlet in Tripoli, Lebanon."
+    }
+  ],
+  "urls": [
+    {
+      "id": "li",
+      "url": "https://www.linkedin.com/company/roundtriplb"
+    },
+    { "id": "tw", "url": "https://twitter.com/Roundtriplb" },
+    { "id": "fb", "url": "https://facebook.com/Roundtriplb" },
+    { "id": "ig", "url": "https://www.instagram.com/roundtriplb" },
+    { "id": "fw1", "url": "https://www.facebook.com/roundtriplb/videos/181836470407461/" },
+    { "id": "fw2", "url": "https://www.facebook.com/roundtriplb/videos/2801502803468500/" },
+    { "id": "nwlt", "url": "http://eepurl.com/gyZgPP" }
+  ],
+  "titles": [
+    {
+      "id": "main_title",
+      "ar": "العدد السابع عشر",
+      "en": "RoundTrip's 17th Issue"
+    },
+    { "id": "v1_section_title", "ar": "آخر فيديو", "en": "Latest Video" },
+    { "id": "v2_section_title", "ar": "فيديو بارز", "en": "Featured Video" },
+    { "id": "v1_title", "ar": "أول مرة: آية عيسى", "en": "أول مرة: آية عيسى" },
+    { "id": "v2_title", "ar": "سواقة الدراجات الهوائية في الشتاء", "en": "Cycling in Winter" },
+    { "id": "article-t1", "ar": "كتابة", "en": "Writer" },
+    { "id": "article-t2", "ar": "تحرير", "en": "Chief Editor" }
+  ],
+  "paragraphs": [
+    {
+      "id": "message_1",
+      "ar": "",
+      "en": "N.B: Currently we only write in Arabic"
+    },
+    {
+      "id": "message_2",
+      "ar": "استكمل(ي) قراءة المقال عبر الضغط على عنوانه",
+      "en": "Continue article reading by clicking on its title"
+    },
+    {
+      "id": "v1_caption",
+      "ar": "فيروس كورونا كان سبب أنه آية تبلش علاقة غرام مع البيسيكليت. وانت؟ كيف كانت أول مرة؟",
+      "en": "فيروس كورونا كان سبب أنه آية تبلش علاقة غرام مع البيسيكليت. وانت؟ كيف كانت أول مرة؟"
+    },
+    {
+      "id": "v2_caption",
+      "ar": "هل إنتوا من الناس اللي ما بيسوقوا لما تبلش تشتي؟",
+      "en": "هل إنتوا من الناس اللي ما بيسوقوا لما تبلش تشتي؟"
+    },
+    { "id": "subscribe", "ar": "اشترك(ي) في نشرتنا الإخبارية", "en": "Subscribe to our Newsletter" },
+    { "id": "footer_main", "ar": "© 2021 RoundTrip", "en": "© 2021 RoundTrip" },
+    {
+      "id": "footer_contact",
+      "ar": "roundtrip.lb@gmail.com :تواصل(ي) معنا",
+      "en": "Contact Us: roundtrip.lb@gmail.com"
+    }
+  ]
+}

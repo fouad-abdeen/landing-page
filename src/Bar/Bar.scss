@@ -1,0 +1,25 @@
+@import "../styles.scss";
+
+.bar-icons {
+  margin-top: 0.25rem;
+}
+
+.sm-icon {
+  padding: 0.25rem;
+  color: $roundtrip-color-secondary;
+}
+
+.bar-info {
+  margin-top: 0.125rem;
+}
+
+.info {
+  background: transparent;
+  border: transparent;
+  border-radius: 50%;
+  color: $roundtrip-color-secondary;
+}
+
+.close-btn {
+  color: $roundtrip-color-primary;
+}
