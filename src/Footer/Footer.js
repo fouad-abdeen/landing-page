@@ -32,9 +32,9 @@ const Footer = (props) => {
             <span>
               {props.miscellaneous.map((x) => x.paragraph)[0]}
               <a
-               className="text-white"
+                className="text-white"
                 target="_blank"
-                href={(props.miscellaneous.map((x) => x.url)[0])}
+                href={props.miscellaneous.map((x) => x.url)[0]}
               >
                 {props.miscellaneous.map((x) => x.title)[0]}
               </a>
@@ -45,7 +45,7 @@ const Footer = (props) => {
               <a
                 className="text-white"
                 target="_blank"
-                href={(props.miscellaneous.map((x) => x.url)[1])}
+                href={props.miscellaneous.map((x) => x.url)[1]}
               >
                 {props.miscellaneous.map((x) => x.title)[1]}
               </a>
