@@ -14,6 +14,11 @@ const Body = (props) => {
           ? props.titles.map((x) => x.ar)[0]
           : props.titles.map((x) => x.en)[0]}
       </h3>
+      <h6 className="text-white body-title">
+        {props.lang === "ar"
+          ? props.titles.map((x) => x.ar)[1]
+          : props.titles.map((x) => x.en)[1]}
+      </h6>
       <div className="body-row">
         <div className="_row" />
       </div>
@@ -55,7 +60,9 @@ const Body = (props) => {
                   rel="noopener noreferrer"
                   href={x.link}
                 >
-                  {props.lang === "ar" ? x.title_ar : x.title_en}
+                  <strong>
+                    {props.lang === "ar" ? x.title_ar : x.title_en}
+                  </strong>
                 </a>
               </button>
             </div>
@@ -67,14 +74,22 @@ const Body = (props) => {
                   <Popover.Content>
                     <p>
                       {props.lang === "ar"
-                        ? props.titles.map((x) => x.ar)[5] + ": " + x.writer_ar
-                        : props.titles.map((x) => x.en)[5] + ": " + x.writer_en}
+                        ? props.titles.map((x) => x.ar)[6] + ": " + x.writer_ar
+                        : props.titles.map((x) => x.en)[6] + ": " + x.writer_en}
                     </p>
-                    <p>
-                      {props.lang === "ar"
-                        ? props.titles.map((x) => x.ar)[6] + ": " + x.editor_ar
-                        : props.titles.map((x) => x.en)[6] + ": " + x.editor_en}
-                    </p>
+                    {x.editor_ar && x.editor_en ? (
+                      <p>
+                        {props.lang === "ar"
+                          ? props.titles.map((x) => x.ar)[7] +
+                            ": " +
+                            x.editor_ar
+                          : props.titles.map((x) => x.en)[7] +
+                            ": " +
+                            x.editor_en}
+                      </p>
+                    ) : (
+                      <span />
+                    )}
                   </Popover.Content>
                 </Popover>
               }
@@ -89,8 +104,8 @@ const Body = (props) => {
       <div className="fb-videos">
         <h3 className="text-white body-title">
           {props.lang === "ar"
-            ? props.titles.map((x) => x.ar)[1]
-            : props.titles.map((x) => x.en)[1]}
+            ? props.titles.map((x) => x.ar)[2]
+            : props.titles.map((x) => x.en)[2]}
         </h3>
         <div className="body-row">
           <div className="_row" />
@@ -119,21 +134,21 @@ const Body = (props) => {
                 }
               >
                 {props.lang === "ar"
-                  ? props.paragraphs.map((x) => x.ar)[2]
-                  : props.paragraphs.map((x) => x.en)[2]}
+                  ? props.titles.map((x) => x.ar)[4]
+                  : props.titles.map((x) => x.en)[4]}
               </a>
               <p>
                 {props.lang === "ar"
-                  ? props.titles.map((x) => x.ar)[3]
-                  : props.paragraphs.map((x) => x.en)[3]}
+                  ? props.paragraphs.map((x) => x.ar)[2]
+                  : props.paragraphs.map((x) => x.en)[2]}
               </p>
             </blockquote>
           </div>
         </div>
         <h3 className="text-white body-title">
           {props.lang === "ar"
-            ? props.titles.map((x) => x.ar)[2]
-            : props.titles.map((x) => x.en)[2]}
+            ? props.titles.map((x) => x.ar)[3]
+            : props.titles.map((x) => x.en)[3]}
         </h3>
         <div className="body-row">
           <div className="_row" />
@@ -162,13 +177,13 @@ const Body = (props) => {
                 }
               >
                 {props.lang === "ar"
-                  ? props.paragraphs.map((x) => x.ar)[3]
-                  : props.paragraphs.map((x) => x.en)[3]}
+                  ? props.titles.map((x) => x.ar)[5]
+                  : props.titles.map((x) => x.en)[5]}
               </a>
               <p>
                 {props.lang === "ar"
-                  ? props.titles.map((x) => x.ar)[4]
-                  : props.paragraphs.map((x) => x.en)[4]}
+                  ? props.paragraphs.map((x) => x.ar)[3]
+                  : props.paragraphs.map((x) => x.en)[3]}
               </p>
             </blockquote>
           </div>
