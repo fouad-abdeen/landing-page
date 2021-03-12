@@ -1,0 +1,22 @@
+[
+  {
+    "id": "main_title_1",
+    "ar": "العدد السابع عشر",
+    "en": "RoundTrip's 17th Issue"
+  },
+  {
+    "id": "main_title_2",
+    "ar": "شباط 2021",
+    "en": "February 2021"
+  },
+  { "id": "v1_section_title", "ar": "آخر فيديو", "en": "Latest Video" },
+  { "id": "v2_section_title", "ar": "فيديو بارز", "en": "Featured Video" },
+  { "id": "v1_title", "ar": "أول مرة: آية عيسى", "en": "أول مرة: آية عيسى" },
+  {
+    "id": "v2_title",
+    "ar": "سواقة الدراجات الهوائية في الشتاء",
+    "en": "Cycling in Winter"
+  },
+  { "id": "article-t1", "ar": "كتابة", "en": "Writer" },
+  { "id": "article-t2", "ar": "تحرير", "en": "Chief Editor" }
+]

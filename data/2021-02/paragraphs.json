@@ -1,0 +1,33 @@
+[
+  {
+    "id": "message_1",
+    "ar": "",
+    "en": "N.B: Currently we only write in Arabic"
+  },
+  {
+    "id": "message_2",
+    "ar": "استكمل(ي) قراءة المقال عبر الضغط على عنوانه",
+    "en": "Continue article reading by clicking on its title"
+  },
+  {
+    "id": "v1_caption",
+    "ar": "فيروس كورونا كان سبب أنه آية تبلش علاقة غرام مع البيسيكليت. وانت؟ كيف كانت أول مرة؟",
+    "en": "فيروس كورونا كان سبب أنه آية تبلش علاقة غرام مع البيسيكليت. وانت؟ كيف كانت أول مرة؟"
+  },
+  {
+    "id": "v2_caption",
+    "ar": "هل إنتوا من الناس اللي ما بيسوقوا لما تبلش تشتي؟",
+    "en": "هل إنتوا من الناس اللي ما بيسوقوا لما تبلش تشتي؟"
+  },
+  {
+    "id": "subscribe",
+    "ar": "اشترك(ي) في نشرتنا الإخبارية",
+    "en": "Subscribe to our Newsletter"
+  },
+  { "id": "footer_main", "ar": "© 2021 RoundTrip", "en": "© 2021 RoundTrip" },
+  {
+    "id": "footer_contact",
+    "ar": "roundtrip.lb@gmail.com :تواصل(ي) معنا",
+    "en": "Contact Us: roundtrip.lb@gmail.com"
+  }
+]
