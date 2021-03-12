@@ -34,6 +34,7 @@ const Footer = (props) => {
               <a
                 className="text-white"
                 target="_blank"
+                rel="noopener noreferrer"
                 href={props.miscellaneous.map((x) => x.url)[0]}
               >
                 {props.miscellaneous.map((x) => x.title)[0]}
@@ -45,6 +46,7 @@ const Footer = (props) => {
               <a
                 className="text-white"
                 target="_blank"
+                rel="noopener noreferrer"
                 href={props.miscellaneous.map((x) => x.url)[1]}
               >
                 {props.miscellaneous.map((x) => x.title)[1]}

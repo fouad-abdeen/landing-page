@@ -49,7 +49,12 @@ const Body = (props) => {
             </OverlayTrigger>
             <div className="d-grid main-buttons">
               <button className="btn btn-light btn-lg body-btn" type="button">
-                <a className="body-links" target="_blank" href={x.link}>
+                <a
+                  className="body-links"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={x.link}
+                >
                   {props.lang === "ar" ? x.title_ar : x.title_en}
                 </a>
               </button>
@@ -175,6 +180,7 @@ const Body = (props) => {
             <a
               className="body-links"
               target="_blank"
+              rel="noopener noreferrer"
               href={props.urls.map((x) => x.url)[6]}
             >
               <strong>

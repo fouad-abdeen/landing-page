@@ -23,16 +23,16 @@ const Bar = (props) => {
   return (
     <>
       <div className="bar-icons">
-        <a target="_blank" href={urls[0]}>
+        <a target="_blank" rel="noopener noreferrer" href={urls[0]}>
           <FontAwesomeIcon className="fa-2x sm-icon" icon={faLinkedin} />
         </a>
-        <a target="_blank" href={urls[1]}>
+        <a target="_blank" rel="noopener noreferrer" href={urls[1]}>
           <FontAwesomeIcon className="fa-2x sm-icon" icon={faTwitter} />
         </a>
-        <a target="_blank" href={urls[2]}>
+        <a target="_blank" rel="noopener noreferrer" href={urls[2]}>
           <FontAwesomeIcon className="fa-2x sm-icon" icon={faFacebook} />
         </a>
-        <a target="_blank" href={urls[3]}>
+        <a target="_blank" rel="noopener noreferrer" href={urls[3]}>
           <FontAwesomeIcon className="fa-2x sm-icon" icon={faInstagram} />
         </a>
       </div>
