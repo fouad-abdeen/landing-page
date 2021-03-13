@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./Footer.scss";
 import logo from "../assets/roundtrip-logo-dark.png";
 
 const Footer = (props) => {
+  const [lang, setLang] = useState("ar");
+  const [paragraphs, setParagraphs] = useState([]);
+  const [miscellaneous, setMiscellaneous] = useState([]);
+
+  useEffect(() => {
+    setLang(props.lang);
+    setParagraphs(props.paragraphs);
+    setMiscellaneous(props.miscellaneous);
+  }, [props]);
+
   return (
     <div className="Footer">
       <div className="container-logo">
@@ -14,42 +24,42 @@ const Footer = (props) => {
       </div>
       <p className="text-white">
         <i>
-          {props.lang === "ar"
-            ? props.paragraphs.map((x) => x.ar)[5]
-            : props.paragraphs.map((x) => x.en)[5]}
+          {lang === "ar"
+            ? paragraphs.map((x) => x.ar)[5]
+            : paragraphs.map((x) => x.en)[5]}
         </i>
       </p>
       <p className="text-white">
         <i>
-          {props.lang === "ar"
-            ? props.paragraphs.map((x) => x.ar)[6]
-            : props.paragraphs.map((x) => x.en)[6]}
+          {lang === "ar"
+            ? paragraphs.map((x) => x.ar)[6]
+            : paragraphs.map((x) => x.en)[6]}
         </i>
       </p>
       <p className="text-white">
         <i>
-          {props.lang === "ar" ? (
+          {lang === "ar" ? (
             <span>
-              {props.miscellaneous.map((x) => x.paragraph)[0]}
+              {miscellaneous.map((x) => x.paragraph)[0]}
               <a
                 className="text-white"
                 target="_blank"
                 rel="noopener noreferrer"
-                href={props.miscellaneous.map((x) => x.url)[0]}
+                href={miscellaneous.map((x) => x.url)[0]}
               >
-                {props.miscellaneous.map((x) => x.title)[0]}
+                {miscellaneous.map((x) => x.title)[0]}
               </a>
             </span>
           ) : (
             <span>
-              {props.miscellaneous.map((x) => x.paragraph)[1]}
+              {miscellaneous.map((x) => x.paragraph)[1]}
               <a
                 className="text-white"
                 target="_blank"
                 rel="noopener noreferrer"
-                href={props.miscellaneous.map((x) => x.url)[1]}
+                href={miscellaneous.map((x) => x.url)[1]}
               >
-                {props.miscellaneous.map((x) => x.title)[1]}
+                {miscellaneous.map((x) => x.title)[1]}
               </a>
             </span>
           )}

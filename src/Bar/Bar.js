@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./Bar.scss";
 import { Modal, Button } from "react-bootstrap";
@@ -11,14 +11,22 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Bar = (props) => {
+  const [lang, setLang] = useState("ar");
+  const [urls, setUrls] = useState([]);
+  const [title, setTitle] = useState([]);
+  const [body, setBody] = useState([]);
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const urls = props.urls.map((x) => x.url);
-  const title = props.info.map((x) => x.title);
-  const body = props.info.map((x) => x.body);
+  useEffect(() => {
+    setLang(props.lang);
+    setUrls(props.urls.map((x) => x.url));
+    setTitle(props.info.map((x) => x.title));
+    setBody(props.info.map((x) => x.body));
+  }, [props]);
 
   return (
     <>
@@ -42,9 +50,9 @@ const Bar = (props) => {
         </button>
       </div>
 
-      <Modal show={show} onHide={handleClose} animation={false}>
+      <Modal show={show} onHide={handleClose} animation={true}>
         <Modal.Header>
-          <Modal.Title>{props.lang === "ar" ? title[0] : title[1]}</Modal.Title>
+          <Modal.Title>{lang === "ar" ? title[0] : title[1]}</Modal.Title>
           <button
             aria-label="close"
             style={{
@@ -59,7 +67,7 @@ const Bar = (props) => {
             <FontAwesomeIcon className="fa-2x sm-icon" icon={faTimes} />
           </button>
         </Modal.Header>
-        <Modal.Body>{props.lang === "ar" ? body[0] : body[1]}</Modal.Body>
+        <Modal.Body>{lang === "ar" ? body[0] : body[1]}</Modal.Body>
         <Modal.Footer>
           <Button className="btn btn-dark close-btn" onClick={handleClose}>
             Close

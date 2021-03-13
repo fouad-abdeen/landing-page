@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "./Body.scss";
 import { Popover, OverlayTrigger } from "react-bootstrap";
@@ -7,29 +7,43 @@ import { faUserEdit } from "@fortawesome/free-solid-svg-icons";
 import { faReadme } from "@fortawesome/free-brands-svg-icons";
 
 const Body = (props) => {
+  const [lang, setLang] = useState("ar");
+  const [articles, setArticles] = useState([]);
+  const [titles, setTitles] = useState([]);
+  const [paragraphs, setParagraphs] = useState([]);
+  const [urls, setUrls] = useState([]);
+
+  useEffect(() => {
+    setLang(props.lang);
+    setArticles(props.articles);
+    setTitles(props.titles);
+    setParagraphs(props.paragraphs);
+    setUrls(props.urls);
+  }, [props]);
+
   return (
     <div>
       <h3 className="text-white body-title">
         {props.lang === "ar"
-          ? props.titles.map((x) => x.ar)[0]
-          : props.titles.map((x) => x.en)[0]}
+          ? titles.map((x) => x.ar)[0]
+          : titles.map((x) => x.en)[0]}
       </h3>
       <h6 className="text-white body-title">
-        {props.lang === "ar"
-          ? props.titles.map((x) => x.ar)[1]
-          : props.titles.map((x) => x.en)[1]}
+        {lang === "ar"
+          ? titles.map((x) => x.ar)[1]
+          : titles.map((x) => x.en)[1]}
       </h6>
       <div className="body-row">
         <div className="_row" />
       </div>
       <h6 className="message text-white">
         <i>
-          {props.lang === "ar"
-            ? props.paragraphs.map((x) => x.ar)[0]
-            : props.paragraphs.map((x) => x.en)[0]}
+          {lang === "ar"
+            ? paragraphs.map((x) => x.ar)[0]
+            : paragraphs.map((x) => x.en)[0]}
         </i>
       </h6>
-      {props.articles.map((x) => {
+      {articles.map((x) => {
         return (
           <div key={x.id.toString()} className="body-buttons">
             <OverlayTrigger
@@ -38,12 +52,12 @@ const Body = (props) => {
               overlay={
                 <Popover>
                   <Popover.Title as="h3">
-                    {props.lang === "ar"
-                      ? props.paragraphs.map((x) => x.ar)[1]
-                      : props.paragraphs.map((x) => x.en)[1]}
+                    {lang === "ar"
+                      ? paragraphs.map((x) => x.ar)[1]
+                      : paragraphs.map((x) => x.en)[1]}
                   </Popover.Title>
                   <Popover.Content>
-                    {props.lang === "ar" ? x.preview_ar : x.preview_en}
+                    {lang === "ar" ? x.preview_ar : x.preview_en}
                   </Popover.Content>
                 </Popover>
               }
@@ -60,9 +74,7 @@ const Body = (props) => {
                   rel="noopener noreferrer"
                   href={x.link}
                 >
-                  <strong>
-                    {props.lang === "ar" ? x.title_ar : x.title_en}
-                  </strong>
+                  <strong>{lang === "ar" ? x.title_ar : x.title_en}</strong>
                 </a>
               </button>
             </div>
@@ -73,19 +85,15 @@ const Body = (props) => {
                 <Popover>
                   <Popover.Content>
                     <p>
-                      {props.lang === "ar"
-                        ? props.titles.map((x) => x.ar)[6] + ": " + x.writer_ar
-                        : props.titles.map((x) => x.en)[6] + ": " + x.writer_en}
+                      {lang === "ar"
+                        ? titles.map((x) => x.ar)[6] + ": " + x.writer_ar
+                        : titles.map((x) => x.en)[6] + ": " + x.writer_en}
                     </p>
                     {x.editor_ar && x.editor_en ? (
                       <p>
-                        {props.lang === "ar"
-                          ? props.titles.map((x) => x.ar)[7] +
-                            ": " +
-                            x.editor_ar
-                          : props.titles.map((x) => x.en)[7] +
-                            ": " +
-                            x.editor_en}
+                        {lang === "ar"
+                          ? titles.map((x) => x.ar)[7] + ": " + x.editor_ar
+                          : titles.map((x) => x.en)[7] + ": " + x.editor_en}
                       </p>
                     ) : (
                       <span />
@@ -103,9 +111,9 @@ const Body = (props) => {
       })}
       <div className="fb-videos">
         <h3 className="text-white body-title">
-          {props.lang === "ar"
-            ? props.titles.map((x) => x.ar)[2]
-            : props.titles.map((x) => x.en)[2]}
+          {lang === "ar"
+            ? titles.map((x) => x.ar)[2]
+            : titles.map((x) => x.en)[2]}
         </h3>
         <div className="body-row">
           <div className="_row" />
@@ -114,7 +122,7 @@ const Body = (props) => {
           <div
             id="fb-video-1"
             className="fb-video"
-            data-href={props.urls.map((x) => x.url)[4]}
+            data-href={urls.map((x) => x.url)[4]}
             data-width="300"
             data-show-text={false}
             data-lazy={true}
@@ -123,32 +131,32 @@ const Body = (props) => {
             <blockquote
               cite={
                 "https://developers.facebook.com/" +
-                props.urls.map((x) => x.url.slice(25))[4]
+                urls.map((x) => x.url.slice(25))[4]
               }
               className="fb-xfbml-parse-ignore"
             >
               <a
                 href={
                   "https://developers.facebook.com/" +
-                  props.urls.map((x) => x.url.slice(25))[4]
+                  urls.map((x) => x.url.slice(25))[4]
                 }
               >
-                {props.lang === "ar"
-                  ? props.titles.map((x) => x.ar)[4]
-                  : props.titles.map((x) => x.en)[4]}
+                {lang === "ar"
+                  ? titles.map((x) => x.ar)[4]
+                  : titles.map((x) => x.en)[4]}
               </a>
               <p>
-                {props.lang === "ar"
-                  ? props.paragraphs.map((x) => x.ar)[2]
-                  : props.paragraphs.map((x) => x.en)[2]}
+                {lang === "ar"
+                  ? paragraphs.map((x) => x.ar)[2]
+                  : paragraphs.map((x) => x.en)[2]}
               </p>
             </blockquote>
           </div>
         </div>
         <h3 className="text-white body-title">
-          {props.lang === "ar"
-            ? props.titles.map((x) => x.ar)[3]
-            : props.titles.map((x) => x.en)[3]}
+          {lang === "ar"
+            ? titles.map((x) => x.ar)[3]
+            : titles.map((x) => x.en)[3]}
         </h3>
         <div className="body-row">
           <div className="_row" />
@@ -157,7 +165,7 @@ const Body = (props) => {
           <div
             id="fb-video-2"
             className="fb-video"
-            data-href={props.urls.map((x) => x.url)[5]}
+            data-href={urls.map((x) => x.url)[5]}
             data-width="300"
             data-show-text="false"
             data-lazy={true}
@@ -166,24 +174,24 @@ const Body = (props) => {
             <blockquote
               cite={
                 "https://developers.facebook.com/" +
-                props.urls.map((x) => x.url.slice(25))[5]
+                urls.map((x) => x.url.slice(25))[5]
               }
               className="fb-xfbml-parse-ignore"
             >
               <a
                 href={
                   "https://developers.facebook.com/" +
-                  props.urls.map((x) => x.url.slice(25))[5]
+                  urls.map((x) => x.url.slice(25))[5]
                 }
               >
-                {props.lang === "ar"
-                  ? props.titles.map((x) => x.ar)[5]
-                  : props.titles.map((x) => x.en)[5]}
+                {lang === "ar"
+                  ? titles.map((x) => x.ar)[5]
+                  : titles.map((x) => x.en)[5]}
               </a>
               <p>
-                {props.lang === "ar"
-                  ? props.paragraphs.map((x) => x.ar)[3]
-                  : props.paragraphs.map((x) => x.en)[3]}
+                {lang === "ar"
+                  ? paragraphs.map((x) => x.ar)[3]
+                  : paragraphs.map((x) => x.en)[3]}
               </p>
             </blockquote>
           </div>
@@ -196,12 +204,12 @@ const Body = (props) => {
               className="body-links"
               target="_blank"
               rel="noopener noreferrer"
-              href={props.urls.map((x) => x.url)[6]}
+              href={urls.map((x) => x.url)[6]}
             >
               <strong>
-                {props.lang === "ar"
-                  ? props.paragraphs.map((x) => x.ar)[4]
-                  : props.paragraphs.map((x) => x.en)[4]}
+                {lang === "ar"
+                  ? paragraphs.map((x) => x.ar)[4]
+                  : paragraphs.map((x) => x.en)[4]}
               </strong>
             </a>
           </button>

@@ -48,11 +48,11 @@ const App = () => {
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 {lang === "ar" ? (
-                  <Dropdown.Item onClick={switchToEn}>
+                  <Dropdown.Item id="d-en" onClick={switchToEn}>
                     <strong> English </strong>
                   </Dropdown.Item>
                 ) : (
-                  <Dropdown.Item onClick={switchToAr}>
+                  <Dropdown.Item id="d-ar" onClick={switchToAr}>
                     <strong> Arabic </strong>
                   </Dropdown.Item>
                 )}
