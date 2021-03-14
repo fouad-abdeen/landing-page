@@ -28,11 +28,11 @@ const Body = (props) => {
           ? titles.map((x) => x.ar)[0]
           : titles.map((x) => x.en)[0]}
       </h3>
-      <h6 className="text-white body-title">
+      <h4 className="text-white body-title">
         {lang === "ar"
           ? titles.map((x) => x.ar)[1]
           : titles.map((x) => x.en)[1]}
-      </h6>
+      </h4>
       <div className="body-row">
         <div className="_row" />
       </div>
