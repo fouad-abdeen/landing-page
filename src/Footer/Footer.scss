@@ -7,10 +7,8 @@
 }
 
 .footer-logo {
-  @media only screen and (max-width: $screen-md - $onePixel) {
-    width: 18.75rem;
-    height: 12.5rem;
-  }
+  width: 18.75rem;
+  height: 12.5rem;
 
   @media only screen and (min-width: $screen-md) {
     width: 23.438rem;

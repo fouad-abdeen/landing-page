@@ -36,13 +36,13 @@ const Body = (props) => {
       <div className="body-row">
         <div className="_row" />
       </div>
-      <h6 className="message text-white">
+      <h4 className="message text-white">
         <i>
           {lang === "ar"
             ? paragraphs.map((x) => x.ar)[0]
             : paragraphs.map((x) => x.en)[0]}
         </i>
-      </h6>
+      </h4>
       {articles.map((x) => {
         return (
           <div key={x.id.toString()} className="body-buttons">
